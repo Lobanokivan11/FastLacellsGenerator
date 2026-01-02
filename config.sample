@@ -23,7 +23,7 @@ ENABLE_RCO=0
 # https://en.wikipedia.org/wiki/Mobile_country_code
 # For example "260|262" for Poland and Germany.
 # Leave dot+asterisk ".*" for all countries
-MCC="260|262"
+MCC=".*"
 
 # RADIO: you can e.g. remove LTE if your phone does not support it
 RADIO="GSM|UMTS|LTE"
@@ -52,5 +52,5 @@ TMPDIR='/tmp'
 # As you can download the OpenCellID database only once per day and API key,
 # keeping the files might be useful for testing purposes. Setting this to 1
 # will keep exactly 1 backup (multiple backups are not implemented currently).
-KEEP_FILES=0
+KEEP_FILES=1
 
