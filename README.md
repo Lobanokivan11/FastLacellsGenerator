@@ -1,5 +1,5 @@
 # FastLacellsGenerator
-Simple script to quickly generate lacells.db cell database.
+Lacells.db is automatically building using github actions
 
 ### How to use
 
