@@ -1,4 +1,4 @@
-name: Add lacells.db
+name: build lacells.db
 
 on: 
   schedule:
@@ -6,12 +6,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  replace-text:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Update token
         env:
           TOKEN_OCID: ${{ secrets.TOKEN_OCID }}
