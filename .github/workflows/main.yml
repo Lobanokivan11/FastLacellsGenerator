@@ -36,7 +36,7 @@ jobs:
           sed -i "s/XXXXXXXXXXXXXX/$TOKEN_OCID/g" flg
       - name: generate lacells
         run: bash flg
-      - name: Release "turnip"
+      - name: Release "lacells.db"
         uses: softprops/action-gh-release@v1
         with:
           body: this is Lacells.db file
