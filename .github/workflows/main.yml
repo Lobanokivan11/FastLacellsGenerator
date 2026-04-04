@@ -18,7 +18,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt upgrade -y
-          sudo apt install -y pigz
 
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
@@ -38,11 +37,11 @@ jobs:
           sed -i "s/XXXXXXXXXXXXXX/$TOKEN_OCID/g" flg
       - name: generate lacells
         run: bash flg
-      - name: Release "lacells.db.gz"
+      - name: Release "lacells.db.xz"
         uses: softprops/action-gh-release@v1
         with:
-          body: this is generated lacells.db.gz file (original lacells.db is deprecated)
+          body: this is generated lacells.db.xz file (original lacells.db is deprecated)
           tag_name: lacells
           name: Lacells database
           files: |
-             lacells.db.gz
+             lacells.db.xz
