@@ -185,6 +185,6 @@ rm $RCO_FILE
 
 if [ -f lacells.db ]; then
   echo "Compressing database..."
-  gzip -9f lacells.db
+  pigz -9f lacells.db
   echo "Done! Final file: lacells.db.gz"
 fi
