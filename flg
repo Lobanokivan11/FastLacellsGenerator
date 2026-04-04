@@ -13,7 +13,7 @@
 
 #DEFAULT_CONFIG_BEGIN
 ENABLE_OCI=1 #enable OpenCellID data source
-ENABLE_MOZ=0 #enable Mozilla Location Services (MLS) data source
+ENABLE_MOZ=1 #enable Mozilla Location Services (MLS) data source
 ENABLE_RCO=0 #enable radiocells.org data source (it can be quite slow)
 
 MCC=".*"            #contry codes separated with "|", for example "260|262". Leave dot+asterisk ".*" for all countries
@@ -177,6 +177,12 @@ SQL
 
 else
   echo "Download error"
+fi
+
+if [ -f lacells.db ]; then
+  echo "Compressing database..."
+  gzip -9f lacells.db
+  echo "Done! Final file: lacells.db.gz"
 fi
 
 rm $OCI_FILE
