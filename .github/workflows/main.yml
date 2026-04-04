@@ -18,6 +18,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt upgrade -y
+          sudo apt install -y pigz
+
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
         with:
