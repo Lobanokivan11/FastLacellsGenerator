@@ -134,7 +134,9 @@ if [ -s $MOZ_FILE ] && [ -s $OCI_FILE ] && [ -s $RCO_FILE ]
 then
 
 manage_backup lacells.db
+manage_backup lacells.db.xz
 rm -f lacells.db
+rm -r lacells.db.xz
 
 echo "Generating database"
 
@@ -185,6 +187,6 @@ rm $RCO_FILE
 
 if [ -f lacells.db ]; then
   echo "Compressing database..."
-  pigz -9f lacells.db
-  echo "Done! Final file: lacells.db.gz"
+  xz -9eT0 lacells.db
+  echo "Done! Final file: lacells.db.xz"
 fi
