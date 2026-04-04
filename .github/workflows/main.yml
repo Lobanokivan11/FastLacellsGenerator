@@ -36,11 +36,11 @@ jobs:
           sed -i "s/XXXXXXXXXXXXXX/$TOKEN_OCID/g" flg
       - name: generate lacells
         run: bash flg
-      - name: Release "lacells.db"
+      - name: Release "lacells.db.gz"
         uses: softprops/action-gh-release@v1
         with:
           body: this is Lacells.db file
           tag_name: lacells
           name: Lacells database
           files: |
-             lacells.db
+             lacells.db.gz
