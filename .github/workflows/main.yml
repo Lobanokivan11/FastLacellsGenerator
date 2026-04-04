@@ -39,7 +39,7 @@ jobs:
       - name: Release "lacells.db.gz"
         uses: softprops/action-gh-release@v1
         with:
-          body: this is Lacells.db file
+          body: this is generated lacells.db.gz file (original lacells.db is deprecated)
           tag_name: lacells
           name: Lacells database
           files: |
