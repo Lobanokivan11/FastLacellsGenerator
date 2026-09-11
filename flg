@@ -184,9 +184,3 @@ fi
 rm $OCI_FILE
 rm $MOZ_FILE
 rm $RCO_FILE
-
-if [ -f lacells.db ]; then
-  echo "Compressing database..."
-  xz -9eT0 lacells.db
-  echo "Done! Final file: lacells.db.xz"
-fi
